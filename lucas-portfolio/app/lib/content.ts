@@ -106,7 +106,7 @@ export type Project = {
 export const PROJECTS: Project[] = [
   {
     id: "fast-good",
-    title: "Fast Good (TEST)",
+    title: "Fast Good",
     subtitle: "Sistema de Gestión de Pedidos y Stock",
     summary:
       "Sistema web full-stack para un negocio real de viandas saludables: pedidos, planes, cocina y control de inventario.",
