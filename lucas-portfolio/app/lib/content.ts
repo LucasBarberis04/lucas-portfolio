@@ -154,7 +154,7 @@ export const PROJECTS: Project[] = [
     links: [
       {
         label: "Repositorio de la tesis",
-        href: "https://github.com/LucasBarberis04/Tesis-Fast-Good",
+        href: "https://github.com/mauri0098/Tesis-Fast-Good",
       },
     ],
   },
