@@ -29,7 +29,7 @@ export function Contact() {
 
           <div className="mt-8 flex flex-wrap gap-3">
             <a
-              href={SITE.cvPath}
+              href={SITE?.cvPath}
               download
               className="inline-flex items-center gap-2 rounded-lg bg-accent px-5 py-3 text-sm font-semibold text-slate-950 transition-colors hover:bg-accent-strong"
             >
@@ -37,14 +37,14 @@ export function Contact() {
               Descargar CV
             </a>
             <a
-              href={`mailto:${SITE.email}`}
+              href={`mailto:${SITE?.email}`}
               className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/[0.02] px-5 py-3 text-sm font-semibold text-slate-200 transition-colors hover:border-accent/40 hover:text-white"
             >
               <Mail className="h-4 w-4" />
               Enviar email
             </a>
             <a
-              href={SITE.linkedin}
+              href={SITE?.linkedin}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/[0.02] px-5 py-3 text-sm font-semibold text-slate-200 transition-colors hover:border-accent/40 hover:text-white"
@@ -55,7 +55,7 @@ export function Contact() {
           </div>
 
           <p className="mt-6 font-mono text-xs text-muted">
-            {SITE.email} · {SITE.location}
+            {SITE?.email} · {SITE?.location}
           </p>
         </div>
       </Reveal>

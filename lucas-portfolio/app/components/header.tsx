@@ -38,8 +38,7 @@ export function Header() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
         scrolled
-          ? "border-b border-white/5 bg-background/80 backdrop-blur-md"
-          : "border-b border-transparent"
+          ? "border-b border-white/5 bg-background/80 backdrop-blur-md" :"border-b border-transparent"
       }`}
     >
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
@@ -59,8 +58,7 @@ export function Header() {
                 href={`#${link.id}`}
                 className={`relative rounded-md px-3 py-2 font-mono text-xs uppercase tracking-widest transition-colors ${
                   active === link.id
-                    ? "text-accent"
-                    : "text-muted hover:text-white"
+                    ? "text-accent" :"text-muted hover:text-white"
                 }`}
               >
                 {link.label}
@@ -114,8 +112,7 @@ export function Header() {
                     onClick={() => setOpen(false)}
                     className={`block rounded-md px-3 py-2.5 font-mono text-sm ${
                       active === link.id
-                        ? "bg-accent/10 text-accent"
-                        : "text-muted hover:bg-white/5 hover:text-white"
+                        ? "bg-accent/10 text-accent" :"text-muted hover:bg-white/5 hover:text-white"
                     }`}
                   >
                     {link.label}
