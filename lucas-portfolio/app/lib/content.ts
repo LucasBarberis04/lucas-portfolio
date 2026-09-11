@@ -158,4 +158,52 @@ export const PROJECTS: Project[] = [
       },
     ],
   },
+  {
+    id: "sintega-sa",
+    title: "Sintega S.A.",
+    subtitle: "Sitio Corporativo y Portal de Servicios Industriales",
+    summary:
+      "Desarrollo integral del sitio web corporativo para empresa certificada ISO 9001:2015: arquitectura modular, galería fotográfica y optimización de conversión de leads.",
+    period: "Proyecto Profesional",
+    context:
+      "Diseño y desarrollo de punta a punta del sitio corporativo para empresa de obras civiles y servicios industriales. Implementación de una arquitectura por secciones con navegación fluida, sistema de diseño con tokens corporativos y doble flujo de conversión (presupuestos y postulaciones).",
+    tech: [
+      "Next.js 15",
+      "React 19",
+      "TypeScript",
+      "Tailwind CSS",
+      "IntersectionObserver API",
+      "SEO Técnico",
+    ],
+    achievements: [
+      {
+        title: "Arquitectura modular y navegación por anclas",
+        detail:
+          "Definición de landing de una sola página y ruta dedicada para galería con resolución dinámica de enlaces activos y animaciones nativas de scroll-reveal.",
+      },
+      {
+        title: "Doble flujo de conversión orientado a negocio",
+        detail:
+          "Rediseño integral de la sección de contacto separando flujos independientes para solicitudes de presupuesto y recepción de currículums con datos y mapas específicos.",
+      },
+      {
+        title: "Optimización técnica y SEO",
+        detail:
+          "Configuración de metadata dinámica, sitemaps y robots.txt, junto con un wrapper de UI reutilizable para la gestión de imágenes pesadas y estados de carga.",
+      },
+    ],
+    skills: [
+      "Next.js 15 App Router",
+      "TypeScript",
+      "Arquitectura por secciones",
+      "SEO Técnico",
+      "Optimización de Conversión (CRO)",
+    ],
+    links: [
+      {
+        label: "Ver repositorio",
+        href: "https://github.com/LucasBarberis04/sintega",
+      },
+    ],
+  },
 ];
