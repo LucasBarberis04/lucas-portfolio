@@ -72,11 +72,8 @@ export function StatusTerminal() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.25 }}
             className={
-              line.kind === "cmd"
-                ? "text-slate-200"
-                : line.kind === "ok"
-                  ? "text-accent"
-                  : "text-muted"
+              line.kind === "cmd" ?"text-slate-200"
+                : line.kind === "ok" ?"text-accent" :"text-muted"
             }
           >
             {line.kind === "cmd" ? (

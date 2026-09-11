@@ -3,7 +3,7 @@ import { SITE } from "@/app/lib/content";
 import { GitHubIcon, LinkedInIcon } from "./brand-icons";
 
 export function Footer() {
-  const year = new Date().getFullYear();
+  const year = new Date()?.getFullYear();
 
   return (
     <footer className="border-t border-white/5 bg-background/60">
@@ -13,7 +13,7 @@ export function Footer() {
             lucas<span className="text-accent">.barberis</span>
           </p>
           <p className="mt-1 text-xs text-muted">
-            {SITE.role} · {SITE.location}
+            {SITE?.role} · {SITE?.location}
           </p>
           <p className="mt-2 font-mono text-[11px] text-muted/70">
             Construido con Next.js · Tailwind CSS · Framer Motion
@@ -22,14 +22,14 @@ export function Footer() {
 
         <div className="flex items-center gap-2">
           <a
-            href={`mailto:${SITE.email}`}
+            href={`mailto:${SITE?.email}`}
             aria-label="Enviar email"
             className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-white/10 text-muted transition-colors hover:border-accent/40 hover:text-white"
           >
             <Mail className="h-4 w-4" />
           </a>
           <a
-            href={SITE.linkedin}
+            href={SITE?.linkedin}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
@@ -51,7 +51,7 @@ export function Footer() {
 
       <div className="border-t border-white/5">
         <p className="mx-auto max-w-6xl px-4 py-4 text-center font-mono text-[11px] text-muted/70 sm:px-6 lg:px-8">
-          © {year} {SITE.name}. Todos los derechos reservados.
+          © {year} {SITE?.name}. Todos los derechos reservados.
         </p>
       </div>
     </footer>
