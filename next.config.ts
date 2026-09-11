@@ -1,15 +1,21 @@
 import type { NextConfig } from "next";
-import path from "path";
 
 const nextConfig: NextConfig = {
-  allowedDevOrigins: ['lucasport5795.builtwithrocket.new'],
-  webpack(config) {
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      '@': path.resolve(__dirname, 'lucas-portfolio'),
-    };
+  turbopack: {},
+
+  webpack(config, { dev }) {
+if (dev) {
+    config.module.rules.push({
+      test: /\.(jsx|tsx)$/,
+      exclude: [/node_modules/],
+      use: [{
+        loader: '@dhiwise/component-tagger/nextLoader',
+      }],
+    });
+  }
+
     return config;
-  },
+  }
 };
 
 export default nextConfig;

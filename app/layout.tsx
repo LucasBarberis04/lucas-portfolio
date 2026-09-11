@@ -3,10 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { SITE } from "@/app/lib/content";
 
-interface LayoutProps {
-  children: React.ReactNode;
-}
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -59,6 +55,10 @@ export const viewport: Viewport = {
   colorScheme: "dark",
 };
 
+interface LayoutProps {
+  children: React.ReactNode;
+}
+
 export default function RootLayout({ children }: LayoutProps) {
   return (
     <html
@@ -67,7 +67,9 @@ export default function RootLayout({ children }: LayoutProps) {
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
         {children}
-      </body>
+
+        <script type="module" async src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Flucasport2483back.builtwithrocket.new&_be=https%3A%2F%2Fappanalytics.rocket.new&_v=0.1.20" />
+        <script type="module" defer src="https://static.rocket.new/rocket-shot.js?v=0.0.3" /></body>
     </html>
   );
 }

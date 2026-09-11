@@ -1,8 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  allowedDevOrigins: ['lucasport5795.builtwithrocket.new'],
+  turbopack: {},
 };
 
 export default nextConfig;
