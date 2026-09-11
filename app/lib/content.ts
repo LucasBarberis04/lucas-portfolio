@@ -157,4 +157,66 @@ export const PROJECTS: Project[] = [
       },
     ],
   },
+  {
+    id: "sintega",
+    title: "Sintega S.A.",
+    subtitle: "Sitio Corporativo — Servicios Industriales",
+    summary:
+      "Sitio web institucional de punta a punta para empresa cordobesa certificada ISO 9001:2015, con galería fotográfica, SEO técnico y flujo de contacto dual orientado a conversión.",
+    period: "Proyecto Freelance",
+    context:
+      "Diseñé y desarrollé el sitio corporativo de Sintega S.A., empresa de Córdoba dedicada a Obras Civiles, Mantenimiento Industrial, Limpieza Industrial, Gestión Ambiental y Movimiento de Suelos. El sitio funciona como vidriera institucional y canal de captación de leads: presenta la empresa, detalla sus cinco líneas de servicio, exhibe una cartera de más de 25 clientes públicos y privados (municipios, EPEC, FAdeA, Lockheed Martin, Ministerios provinciales) y ofrece dos vías de conversión diferenciadas: solicitud de presupuesto y envío de currículum.",
+    tech: [
+      "Next.js 15",
+      "React 19",
+      "TypeScript",
+      "Tailwind CSS",
+      "App Router",
+      "IntersectionObserver API",
+      "Metadata API",
+      "Netlify / Vercel",
+    ],
+    achievements: [
+      {
+        title: "Arquitectura de componentes por secciones",
+        detail:
+          "Landing de una sola página con navegación por anclas (Inicio, Sobre Nosotros, Servicios, Clientes, Trabajos, Por qué elegirnos, Contacto) y ruta dedicada /galeria con App Router.",
+      },
+      {
+        title: "Sistema de design tokens y theming corporativo",
+        detail:
+          "Tokens de color vía CSS custom properties (--primary, --accent, --dark-green) consumidos por Tailwind, con paleta de verdes corporativa y tipografía variable Plus Jakarta Sans.",
+      },
+      {
+        title: "Galería fotográfica con 88 imágenes en 7 grupos temáticos",
+        detail:
+          "Curaduría y organización de imágenes por línea de servicio, con layouts de grilla adaptativos (aspect-video, object-cover) y carga optimizada con next/image.",
+      },
+      {
+        title: "Flujo de contacto dual orientado a conversión",
+        detail:
+          "Rediseño de la sección de Contacto a dos columnas independientes (Currículum / Presupuesto) con datos de contacto, íconos, mapa y botón flotante de WhatsApp con mensaje predefinido.",
+      },
+      {
+        title: "SEO técnico completo",
+        detail:
+          "Metadata dinámica con Metadata API de Next.js, sitemap.ts y robots.ts generados dinámicamente, alt descriptivo en cada imagen y metadataBase configurable por entorno.",
+      },
+    ],
+    skills: [
+      "Next.js App Router",
+      "Design tokens / Theming",
+      "Animaciones con IntersectionObserver",
+      "SEO técnico",
+      "Responsive & mobile-first",
+      "Accesibilidad básica",
+      "Despliegue en Vercel / Netlify",
+    ],
+    links: [
+      {
+        label: "Repositorio del proyecto",
+        href: "https://github.com/LucasBarberis04/sintega",
+      },
+    ],
+  },
 ];
