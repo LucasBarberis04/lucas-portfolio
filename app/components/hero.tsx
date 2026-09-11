@@ -30,10 +30,10 @@ export function Hero() {
         <motion.div variants={container} initial="hidden" animate="show">
           <motion.div
             variants={item}
-            className="inline-flex items-center gap-2 rounded-full border border-accent/25 bg-accent/10 px-3 py-1 font-mono text-xs text-accent"
+            className="inline-flex items-center gap-2 rounded-full border border-accent/35 bg-accent/[0.08] px-3.5 py-1.5 font-mono text-xs text-accent shadow-[0_0_16px_rgba(110,231,247,0.12)]"
           >
             <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent/70" />
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent/80" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
             </span>
             {SITE.status} · {SITE.location}
@@ -43,21 +43,21 @@ export function Hero() {
             variants={item}
             className="mt-6 text-4xl font-bold tracking-tight text-white sm:text-6xl"
           >
-            {SITE.name}
+            <span className="text-gradient">{SITE.name}</span>
           </motion.h1>
 
           <motion.p
             variants={item}
             className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-sm text-muted sm:text-base"
           >
-            <span className="text-gradient font-semibold">{SITE.role}</span>
-            <span className="text-white/20">/</span>
-            <span>{SITE.altRole}</span>
+            <span className="text-gradient-subtle font-semibold">{SITE.role}</span>
+            <span className="text-white/25">/</span>
+            <span className="text-foreground/70">{SITE.altRole}</span>
           </motion.p>
 
           <motion.p
             variants={item}
-            className="mt-6 max-w-xl text-lg leading-relaxed text-slate-300"
+            className="mt-6 max-w-xl text-lg leading-relaxed text-foreground/75"
           >
             {SITE.tagline}
           </motion.p>
@@ -66,14 +66,14 @@ export function Hero() {
             <a
               href="/CV_Lucas_Barberis.pdf"
               download="CV_Lucas_Barberis.pdf"
-              className="group inline-flex items-center gap-2 rounded-lg bg-accent px-5 py-3 text-sm font-semibold text-slate-950 transition-colors hover:bg-accent-strong"
+              className="group inline-flex items-center gap-2 rounded-lg bg-accent px-5 py-3 text-sm font-semibold text-slate-950 shadow-[0_0_20px_rgba(110,231,247,0.25)] transition-all hover:bg-accent-strong hover:shadow-[0_0_28px_rgba(110,231,247,0.35)]"
             >
               <Download className="h-4 w-4" />
               Descargar CV
             </a>
             <a
               href="#proyectos"
-              className="group inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/[0.02] px-5 py-3 text-sm font-semibold text-slate-200 transition-colors hover:border-accent/40 hover:text-white"
+              className="group inline-flex items-center gap-2 rounded-lg border border-accent/25 bg-accent/[0.06] px-5 py-3 text-sm font-semibold text-accent transition-all hover:border-accent/50 hover:bg-accent/[0.12] hover:text-white"
             >
               Ver proyectos
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />

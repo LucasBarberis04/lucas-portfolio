@@ -10,6 +10,8 @@ const ICONS: Record<string, LucideIcon> = {
   Workflow,
 };
 
+const CARD_ACCENTS = ["accent", "accent-2", "accent-3", "accent"];
+
 export function Stack() {
   return (
     <section
@@ -25,11 +27,30 @@ export function Stack() {
       <div className="grid gap-4 sm:grid-cols-2">
         {STACK.map((cat, i) => {
           const Icon = ICONS[cat.icon] ?? Code2;
+          const accent = CARD_ACCENTS[i % CARD_ACCENTS.length];
+          const isAccent2 = accent === "accent-2";
+          const isAccent3 = accent === "accent-3";
           return (
             <Reveal key={cat.id} delay={i * 0.07} as="article">
-              <div className="group h-full rounded-2xl border border-white/10 bg-surface/60 p-6 transition-colors hover:border-accent/30 hover:bg-surface">
+              <div
+                className={`group h-full rounded-2xl border bg-surface/70 p-6 transition-all hover:bg-surface ${
+                  isAccent2
+                    ? "border-accent-2/15 hover:border-accent-2/35 hover:shadow-[0_0_20px_rgba(167,139,250,0.08)]"
+                    : isAccent3
+                    ? "border-accent-3/15 hover:border-accent-3/35 hover:shadow-[0_0_20px_rgba(56,189,248,0.08)]"
+                    : "border-accent/15 hover:border-accent/35 hover:shadow-[0_0_20px_rgba(110,231,247,0.08)]"
+                }`}
+              >
                 <div className="flex items-center gap-3">
-                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-accent/20 bg-accent/10 text-accent">
+                  <span
+                    className={`inline-flex h-10 w-10 items-center justify-center rounded-lg border ${
+                      isAccent2
+                        ? "border-accent-2/25 bg-accent-2/[0.08] text-accent-2"
+                        : isAccent3
+                        ? "border-accent-3/25 bg-accent-3/[0.08] text-accent-3"
+                        : "border-accent/25 bg-accent/[0.08] text-accent"
+                    }`}
+                  >
                     <Icon className="h-5 w-5" />
                   </span>
                   <h3 className="text-base font-semibold text-white">
@@ -45,7 +66,13 @@ export function Stack() {
                   {cat.skills.map((skill) => (
                     <li
                       key={skill}
-                      className="rounded-md border border-white/10 bg-white/[0.03] px-2.5 py-1 font-mono text-xs text-slate-300 transition-colors group-hover:border-white/15"
+                      className={`rounded-md border px-2.5 py-1 font-mono text-xs transition-colors ${
+                        isAccent2
+                          ? "border-accent-2/15 bg-accent-2/[0.04] text-foreground/75 group-hover:border-accent-2/25"
+                          : isAccent3
+                          ? "border-accent-3/15 bg-accent-3/[0.04] text-foreground/75 group-hover:border-accent-3/25"
+                          : "border-accent/15 bg-accent/[0.04] text-foreground/75 group-hover:border-accent/25"
+                      }`}
                     >
                       {skill}
                     </li>

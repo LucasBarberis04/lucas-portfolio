@@ -42,7 +42,11 @@ function ProjectCard({
   const panelId = `project-panel-${project.id}`;
 
   return (
-    <div className="overflow-hidden rounded-2xl border border-white/10 bg-surface/60 transition-colors hover:border-accent/25">
+    <div className={`overflow-hidden rounded-2xl border bg-surface/70 transition-all ${
+      open
+        ? "border-accent/30 shadow-[0_0_24px_rgba(110,231,247,0.07)]"
+        : "border-white/10 hover:border-accent/20 hover:shadow-[0_0_16px_rgba(110,231,247,0.05)]"
+    }`}>
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
@@ -50,7 +54,7 @@ function ProjectCard({
         aria-controls={panelId}
         className="flex w-full items-start gap-4 p-6 text-left"
       >
-        <span className="mt-0.5 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-accent/20 bg-accent/10 text-accent">
+        <span className="mt-0.5 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-accent/25 bg-accent/[0.08] text-accent shadow-[0_0_12px_rgba(110,231,247,0.1)]">
           <FolderGit2 className="h-5 w-5" />
         </span>
 
@@ -60,7 +64,7 @@ function ProjectCard({
               {project.title}
             </span>
             {project.period ? (
-              <span className="rounded-full border border-white/10 bg-white/[0.03] px-2 py-0.5 font-mono text-[11px] text-muted">
+              <span className="rounded-full border border-accent/20 bg-accent/[0.06] px-2 py-0.5 font-mono text-[11px] text-accent/80">
                 {project.period}
               </span>
             ) : null}
@@ -74,8 +78,8 @@ function ProjectCard({
         </span>
 
         <ChevronDown
-          className={`mt-1 h-5 w-5 shrink-0 text-muted transition-transform duration-300 ${
-            open ? "rotate-180 text-accent" : ""
+          className={`mt-1 h-5 w-5 shrink-0 transition-transform duration-300 ${
+            open ? "rotate-180 text-accent" : "text-muted"
           }`}
         />
       </button>
@@ -91,8 +95,8 @@ function ProjectCard({
             transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
             className="overflow-hidden"
           >
-            <div className="border-t border-white/5 px-6 pb-6 pt-5 sm:px-6">
-              <p className="text-sm leading-relaxed text-slate-300">
+            <div className="border-t border-accent/10 px-6 pb-6 pt-5 sm:px-6">
+              <p className="text-sm leading-relaxed text-foreground/75">
                 {project.context}
               </p>
 
@@ -104,7 +108,7 @@ function ProjectCard({
                   {project.tech.map((t) => (
                     <li
                       key={t}
-                      className="rounded-md border border-accent/20 bg-accent/10 px-2.5 py-1 font-mono text-xs text-accent"
+                      className="rounded-md border border-accent/25 bg-accent/[0.07] px-2.5 py-1 font-mono text-xs text-accent"
                     >
                       {t}
                     </li>
@@ -119,7 +123,7 @@ function ProjectCard({
                 <ul className="mt-3 space-y-3">
                   {project.achievements.map((a) => (
                     <li key={a.title} className="flex gap-3">
-                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent shadow-[0_0_6px_rgba(110,231,247,0.5)]" />
                       <span>
                         <span className="block text-sm font-medium text-white">
                           {a.title}
@@ -141,7 +145,7 @@ function ProjectCard({
                   {project.skills.map((s) => (
                     <li
                       key={s}
-                      className="rounded-md border border-white/10 bg-white/[0.03] px-2.5 py-1 text-xs text-slate-300"
+                      className="rounded-md border border-accent-2/20 bg-accent-2/[0.05] px-2.5 py-1 text-xs text-foreground/80"
                     >
                       {s}
                     </li>
@@ -157,7 +161,7 @@ function ProjectCard({
                       href={l.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 rounded-md border border-white/15 px-3 py-1.5 text-xs font-medium text-slate-200 transition-colors hover:border-accent/40 hover:text-white"
+                      className="inline-flex items-center gap-1.5 rounded-md border border-accent/25 bg-accent/[0.06] px-3 py-1.5 text-xs font-medium text-accent transition-all hover:border-accent/50 hover:bg-accent/[0.12] hover:text-white"
                     >
                       {l.label}
                       <ExternalLink className="h-3.5 w-3.5" />
