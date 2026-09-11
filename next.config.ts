@@ -2,6 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   turbopack: {},
+  allowedDevOrigins: ['lucasport2483.builtwithrocket.new'],
 
   webpack(config, { dev }) {
 if (dev) {
