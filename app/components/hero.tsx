@@ -41,7 +41,7 @@ export function Hero() {
 
           <motion.h1
             variants={item}
-            className="mt-6 text-4xl font-semibold tracking-tight text-white sm:text-6xl"
+            className="mt-6 text-4xl font-bold tracking-tight text-white sm:text-6xl"
           >
             {SITE.name}
           </motion.h1>
